@@ -104,8 +104,6 @@ svg * {
 }
 
 .theme-light {
-
-  --button-radius: 10px;
   /*Color variables*/
   --primary: #122D42;
   --primary-alt: #7BB6E1;
