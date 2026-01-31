@@ -1,34 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+  --radius-s: 10px;
+  --radius-m: 10px;
+  --radius-l: 20px;
+  --input-radius: 10px;
+  --tab-radius-active: 10px;
+  --checkbox-radius: 10px;
+  --toggle-radius: 15px;
+  --toggle-thumb-radius: 10px;
+  --slider-thumb-radius: 10px;
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+  display: none;
 }
 
 svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  rx: 0;
+  ry: 0;
 }
 
 .menu {
-	padding: var(--size-2-1);
+  padding: var(--size-2-1);
 }
 
 .menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
+  padding: var(--size-4-1) var(--size-4-2);
 }
 
 .menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+  margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+/* body {
+  --font-text-theme: Georgia, serif;
+} */
+
+
+
+.theme-dark {
+  /*Color variables*/
+  --primary: #062111;
+  --primary-alt: #559471;
+  --secondary: #635551;
+  --secondary-alt: #6C5141;
+  --tertiary: #CDB69B;
+  /* Background colors */
+  --background-primary: var(--primary);
+  --background-secondary: var(--secondary);
+
+  --header-color: var(--primary-alt);
+  --text-normal: var(--tertiary);
+
+  /*Headings and text*/
+  --h1-color: var(--primary-alt);
+  --h2-color: var(--primary-alt);
+  --h3-color: var(--primary-alt);
+  --h4-color: var(--primary-alt);
+  --h5-color: var(--primary-alt);
+  --h6-color: var(--primary-alt);
+  --link-color: var(--primary-alt);
+  --link-color-hover: var(--primary-alt);
+  --link-unresolved-color: var(--primary-alt);
+  --link-weight: 800;
+  --link-unresolved-color-hover: var(--primary-alt);
+
+  /* --font-text-theme: "EB Garamond", serif; */
+
+  --icon-color: var(--text-normal);
+
+
+  /*tabs*/
+  --tab-background-active: var(--primary);
+  --tab-background-inactive: var(--secondary);
+  --tab-text-color-focused-active-current: var(--text-normal);
+  --tab-curve: 10px 10px 0 0;
+  --tab-radius: 10px 10px 0 0;
+  --tab-radius-active: 10px 10px 0 0;
+
+  /*Nav item*/
+  --nav-item-color: #CDB69B;
+  /* File names in sidebar */
+  --nav-item-color-active: #ffffff;
+  --nav-item-background-active: rgba(85, 148, 113, 0.2);
+
+  --status-bar-background: var(--text-normal);
+  --status-bar-text-color: white;
+  --titlebar-background-focused: var(--secondary-alt);
+
+  --ribbon-background: var(--secondary);
+
+  /*Graph*/
+  --graph-text: var(--primary-alt);
+  --graph-node-attachment: var(--primary);
+  --graph-node-tag: var(--secondary);
+  --graph-line: var(--secondary-alt);
+  --graph-node: var(--tertiary);
+  --graph-node-unresolved: var(--secondary-alt);
+}
+
+.theme-light {
+
+  --button-radius: 10px;
+  /*Color variables*/
+  --primary: #122D42;
+  --primary-alt: #7BB6E1;
+  --secondary: #326295;
+  --secondary-alt: #97D9F5;
+  --tertiary: #ACECF9;
+  /* Background colors */
+  --background-primary: var(--primary);
+  --background-secondary: var(--secondary);
+
+  --header-color: var(--primary-alt);
+  --text-normal: var(--tertiary);
+
+  /*Headings and text*/
+  --h1-color: var(--primary-alt);
+  --h2-color: var(--primary-alt);
+  --h3-color: var(--primary-alt);
+  --h4-color: var(--primary-alt);
+  --h5-color: var(--primary-alt);
+  --h6-color: var(--primary-alt);
+  --link-color: #5998CC;
+  --link-color-hover: var(--primary-alt);
+  --link-unresolved-color: var(--primary-alt);
+  --link-weight: 800;
+  --link-unresolved-color-hover: var(--primary-alt);
+
+  /* --font-text-theme: "EB Garamond", serif; */
+
+  --icon-color: var(--tertiary);
+
+
+  /*tabs*/
+  --tab-background-active: var(--primary);
+  --tab-background-inactive: var(--secondary);
+  --tab-text-color-focused-active-current: var(--text-normal);
+  --tab-curve: 10px 10px 0 0;
+  --tab-radius: 10px 10px 0 0;
+  --tab-radius-active: 10px 10px 0 0;
+
+  /*Nav item*/
+  --nav-item-color: var(--text-normal);
+  /* File names in sidebar */
+  --nav-item-color-active: #ffffff;
+  --nav-item-background-active: rgba(85, 148, 113, 0.2);
+
+  --status-bar-background: var(--secondary);
+  --status-bar-text-color: white;
+  --titlebar-background-focused: var(--secondary);
+
+  --ribbon-background: var(--secondary);
+  --background-modifier-active-hover: var(--primary-alt);
+
+  /*Graph*/
+  --graph-text: var(--primary-alt);
+  --graph-node-attachment: var(--primary);
+  --graph-node-tag: var(--secondary);
+  --graph-line: var(--secondary-alt);
+  --graph-node: var(--tertiary);
+  --graph-node-unresolved: var(--secondary-alt);
 }
